@@ -10,18 +10,7 @@
   </head>
   <body class="{{body_class}}">
     {{{body}}}
-    <footer>
-      <a href="{{@blog.url}}/rss/">
-        {{t "Subscribe via RSS!"}}
-      </a>
-      {{#if @labs.subscribers}}
-        {{subscribe_form placeholder=(t "youremail@example.com")}}
-      {{/if}}
-      <section>
-        <a href="{{@blog.url}}/">{{@blog.title}}</a>
-        &copy; {{date format="YYYY"}} &bull; {{t "All rights reserved."}}
-      </section>
-    </footer>
+    {{> "site-footer"}}
     {{ghost_foot}}
     <script type="text/javascript" src="{{asset "js/app.js"}}"></script>
   </body>

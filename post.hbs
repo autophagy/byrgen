@@ -1,7 +1,4 @@
 {{!< default}}
-
-{{> "site-header"}}
-
 {{#post}}
   <main role="main">
     <article class="{{post_class}}">
@@ -23,9 +20,6 @@
         {{content}}
       </section>
       <footer>
-        <section>
-          {{> "authors" }}
-        </section>
         <section>
           {{t "Share this post"}}
           <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"

@@ -1,22 +1,24 @@
 <ul>
   {{#foreach posts}}
     <li class="{{post_class}}">
-      <h2>
-        <a href="{{url}}">{{{title}}}</a>
-      </h2>
+      <div class="post-header">
+        <h2>
+          <a href="{{url}}">{{{title}}}</a>
+        </h2>
+        <div class="post-details">
+          <time datetime="{{date format='YYYY-MM-DD'}}">
+            {{date format="DD MMMM YYYY"}}
+          </time>
+          <span class="seperator"></span>
+              {{tags separator=", "}}
+        </div>
+      </div>
       <section>
         <p>
           {{excerpt words="26"}}
-          <a href="{{url}}">&raquo;</a>
+          <a href="{{url}}">&#x2B21;</a>
         </p>
       </section>
-      <footer>
-        {{> "authors" }}
-        {{tags prefix=(t " on ")}}
-        <time datetime="{{date format='YYYY-MM-DD'}}">
-          {{date format="DD MMMM YYYY"}}
-        </time>
-      </footer>
     </li>
   {{/foreach}}
 </ul>

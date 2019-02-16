@@ -2,7 +2,7 @@
    Includes
    ========================================================================== */
 
-@import "normalize";
+@import "reset";
 @import "colours";
 @import "fonts";
 @import "highlight";
@@ -11,3 +11,120 @@
    Basics
    ========================================================================== */
 
+body {
+    background-color: $primary-background;
+    font-family: 'plex', sans-serif;
+    color: $primary-foreground;
+    font-size: 18px;
+    padding: 4em;
+}
+
+a {
+    color: $primary-foreground;
+    text-decoration: none;
+    font-family: 'plex-bold';
+}
+
+a {
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.25s;
+}
+
+a:hover {
+    border-bottom: 2px solid $primary-foreground;
+}
+
+table {
+    margin: 0 0 1.5em;
+    width: 100%;
+    max-width: 100%;
+}
+
+table thead th {
+    font-family: 'plex-bold';
+    text-align: left;
+}
+
+table th, table td {
+    padding: 0.5em;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.seperator {
+    padding: 0em 1em;
+}
+
+.seperator::after {
+  content: "|";
+}
+
+/* ==========================================================================
+   Index Header
+   ========================================================================== */
+
+#blog-header {
+    text-align: center;
+    margin-bottom: 3em;
+
+    h1 {
+        font-size: 4em;
+        font-family: 'plex-light';
+        text-transform: lowercase;
+        letter-spacing: 0.3em;
+    }
+
+    #blog-description {
+        margin-top: 1.5em;
+    }
+}
+
+/* ==========================================================================
+   Index Body
+   ========================================================================== */
+
+main {
+
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3em;
+
+    .post-header {
+        h2 {
+            font-size: 2em;
+            margin-bottom: 0.33em;
+
+            a {
+                font-family: 'plex-light';
+            }
+
+            a:hover {
+                border-bottom: 0px solid transparent;
+            }
+        }
+
+        .post-details {
+            opacity: 0.8;
+        }
+
+        margin-bottom: 1em;
+    }
+
+    .post {
+        margin-bottom: 2em;
+    }
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
