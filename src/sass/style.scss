@@ -96,6 +96,7 @@ blockquote {
     padding-left: 0.5em;
     border-left: 3px solid $primary-foreground;
     line-height: 1.5;
+    margin-bottom: 1em;
 }
 
 pre {
@@ -128,6 +129,15 @@ figure {
     figcaption::before {
         content: ":: ";
     }
+}
+
+strong {
+    font-family: 'plex-bold';
+}
+
+hr {
+    border: 1px solid $primary-foreground;
+    margin: 2em 0em;
 }
 
 /* ==========================================================================
@@ -253,6 +263,18 @@ main#index {
     margin-right: auto;
     padding: 4em;
 }
+
+/* ==========================================================================
+   Page Body
+   ========================================================================== */
+
+.page {
+    width: $primary-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4em;
+}
+
 
 /* ==========================================================================
    Footer
