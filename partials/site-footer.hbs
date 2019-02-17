@@ -1,3 +1,12 @@
 <footer>
+{{#if @blog.navigation}}
+<ul id="navigation">
+    {{#foreach @blog.navigation}}
+    <li role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+    {{/foreach}}
+</ul>
+{{/if}}
+<div id="credits">
 Published with <a href="https://ghost.org/">Ghost</a>
+</div>
 </footer>

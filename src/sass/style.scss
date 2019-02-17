@@ -3,7 +3,7 @@
    ========================================================================== */
 
 @import "reset";
-@import "colours";
+@import "variables";
 @import "fonts";
 @import "highlight";
 
@@ -16,7 +16,6 @@ body {
     font-family: 'plex', sans-serif;
     color: $primary-foreground;
     font-size: 18px;
-    padding: 4em;
 }
 
 a {
@@ -51,14 +50,84 @@ table th, table td {
 
 p {
     line-height: 1.5;
+    margin-bottom: 1em;
 }
 
 .seperator {
-    padding: 0em 1em;
+    padding: 0em 0.3em;
 }
 
 .seperator::after {
-  content: "|";
+    content: "|";
+}
+
+ol {
+    list-style: lower-roman;
+    margin-bottom: 1em;
+
+    li {
+        line-height: 1.5;
+        margin-bottom: 0.5em;
+        margin-left: 1em;
+        padding-left: 1em;
+    }
+}
+
+ul {
+    list-style: circle;
+    margin-bottom: 1em;
+
+    li {
+        line-height: 1.5;
+        margin-bottom: 0.5em;
+        margin-left: 1em;
+        padding-left: 1em;
+    }
+}
+
+h1, h2 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    font-family: 'plex-light';
+}
+
+blockquote {
+    font-size: 1.5em;
+    padding-left: 0.5em;
+    border-left: 3px solid $primary-foreground;
+    line-height: 1.5;
+}
+
+pre {
+    font-family: "Inconsolata",monospace;
+    background-color: $primary-foreground;
+    color: $primary-background;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+code {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+figure {
+
+    margin-bottom: 1em;
+
+    img {
+        max-width: 100%;
+    }
+
+    figcaption {
+        color: $ghostly;
+        margin-top: 0.5em;
+        font-family: 'Inconsolata',monospace;
+    }
+
+    figcaption::before {
+        content: ":: ";
+    }
 }
 
 /* ==========================================================================
@@ -67,7 +136,7 @@ p {
 
 #blog-header {
     text-align: center;
-    margin-bottom: 3em;
+    padding: 4em 4em 0em 4em;
 
     h1 {
         font-size: 4em;
@@ -85,12 +154,12 @@ p {
    Index Body
    ========================================================================== */
 
-main {
+main#index {
 
-    width: 1000px;
+    width: $primary-width;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 3em;
+    padding: 4em;
 
     .post-header {
         h2 {
@@ -107,15 +176,82 @@ main {
         }
 
         .post-details {
-            opacity: 0.8;
+            color: $ghostly;
+
+            a {
+                font-family: 'plex';
+                color: $ghostly;
+            }
         }
 
         margin-bottom: 1em;
     }
 
     .post {
-        margin-bottom: 2em;
+        margin-bottom: 4em;
     }
+
+    ul {
+        list-style: none;
+        margin: 0;
+
+        li {
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    nav.pagination {
+        font-family: 'Inconsolata';
+    }
+}
+
+/* ==========================================================================
+   Post Header
+   ========================================================================== */
+
+#post-header {
+    width: 100%;
+    height: 24em;
+    background-color: $primary-background;
+    background-size: cover;
+    background-position: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+
+    #post-details {
+        width: $primary-width;
+        padding: 4em 0em;
+        margin: 0em 4em;
+        position: relative;
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 0.33em;
+            font-family: 'plex-light';
+        }
+
+        a.home {
+            font-size: 2em;
+            position: absolute;
+            top: 3em;
+            left: -1.5em;
+        }
+    }
+}
+
+/* ==========================================================================
+   Post Body
+   ========================================================================== */
+
+#post-body {
+    width: $primary-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4em;
 }
 
 /* ==========================================================================
@@ -124,7 +260,30 @@ main {
 
 footer {
 
-    width: 1000px;
+    width: $primary-width;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+
+    #credits, #navigation {
+        width: 49%;
+    }
+
+    #credits {
+        text-align: right;
+    }
+
+    #navigation {
+        list-style: none;
+        margin: 0px;
+        display: flex;
+
+        li {
+            margin: 0px;
+            padding: 0px;
+            margin-right: 1em;
+        }
+    }
 }
