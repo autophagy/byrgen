@@ -266,8 +266,9 @@ footer {
     margin-bottom: 4em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
-    #credits, #navigation {
+    #credits, .nav {
         width: 49%;
     }
 
@@ -275,7 +276,7 @@ footer {
         text-align: right;
     }
 
-    #navigation {
+    .nav {
         list-style: none;
         margin: 0px;
         display: flex;
