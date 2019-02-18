@@ -222,7 +222,8 @@ main#index {
 
 #post-header {
     width: 100%;
-    height: 24em;
+    height: 33vh;
+    min-height: 10em;
     background-color: $primary-background;
     background-size: cover;
     background-position: 50%;
@@ -234,21 +235,14 @@ main#index {
 
     #post-details {
         width: $primary-width;
-        padding: 4em 0em;
-        margin: 0em 4em;
+        padding: 4em 4em 0em 4em;
         position: relative;
+        background: $primary-background;
 
         h1 {
             font-size: 2em;
             margin-bottom: 0.33em;
             font-family: 'plex-light';
-        }
-
-        a.home {
-            font-size: 2em;
-            position: absolute;
-            top: 3em;
-            left: -1.5em;
         }
     }
 }
