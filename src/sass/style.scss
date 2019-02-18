@@ -21,7 +21,7 @@ body {
 a {
     color: $primary-foreground;
     text-decoration: none;
-    font-family: 'plex-bold';
+    font-family: 'plex-bold', sans-serif;
 }
 
 a {
@@ -40,7 +40,7 @@ table {
 }
 
 table thead th {
-    font-family: 'plex-bold';
+    font-family: 'plex-bold', sans-serif;
     text-align: left;
 }
 
@@ -88,7 +88,7 @@ ul {
 h1, h2 {
     font-size: 2em;
     margin-bottom: 1em;
-    font-family: 'plex-light';
+    font-family: 'plex-light', sans-serif;
 }
 
 blockquote {
@@ -132,7 +132,7 @@ figure {
 }
 
 strong {
-    font-family: 'plex-bold';
+    font-family: 'plex-bold', sans-serif;
 }
 
 hr {
@@ -150,7 +150,7 @@ hr {
 
     h1 {
         font-size: 4em;
-        font-family: 'plex-light';
+        font-family: 'plex-light', sans-serif;
         text-transform: lowercase;
         letter-spacing: 0.3em;
     }
@@ -177,7 +177,7 @@ main#index {
             margin-bottom: 0.33em;
 
             a {
-                font-family: 'plex-light';
+                font-family: 'plex-light', sans-serif;
             }
 
             a:hover {
@@ -189,7 +189,7 @@ main#index {
             color: $ghostly;
 
             a {
-                font-family: 'plex';
+                font-family: 'plex', sans-serif;
                 color: $ghostly;
             }
         }
@@ -227,6 +227,7 @@ main#index {
     background-color: $primary-background;
     background-size: cover;
     background-position: 50%;
+    border-bottom: 1px solid $primary-foreground;
 
     display: flex;
     flex-direction: row;
@@ -238,11 +239,14 @@ main#index {
         padding: 4em 4em 0em 4em;
         position: relative;
         background: $primary-background;
+        border: 1px solid $primary-foreground;
+        border-bottom: 1px solid transparent;
+        top: 1px;
 
         h1 {
             font-size: 2em;
             margin-bottom: 0.33em;
-            font-family: 'plex-light';
+            font-family: 'plex-light', sans-serif;
         }
     }
 }
