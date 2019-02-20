@@ -62,7 +62,7 @@ p {
 }
 
 ol {
-    list-style: lower-roman;
+    list-style: decimal;
     margin-bottom: 1em;
 
     li {
@@ -99,16 +99,16 @@ blockquote {
     margin-bottom: 1em;
 }
 
-pre {
+pre, code {
     font-family: "Inconsolata",monospace;
     background-color: $primary-foreground;
     color: $primary-background;
-    padding: 1em;
-    margin-bottom: 1em;
+    padding: 2px;
 }
 
-code {
-    max-width: 100%;
+pre {
+    padding: 1em;
+    margin-bottom: 1em;
     overflow-x: auto;
 }
 
@@ -138,6 +138,24 @@ strong {
 hr {
     border: 1px solid $primary-foreground;
     margin: 2em 0em;
+}
+
+em {
+    font-style: italic;
+}
+
+sup, sub {
+    font-size: 0.75em;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    bottom: 0.75em;
+}
+
+sub {
+    top: 0.25em;
 }
 
 /* ==========================================================================
@@ -260,6 +278,16 @@ main#index {
     margin-left: auto;
     margin-right: auto;
     padding: 4em;
+
+    .admonition {
+        background-color: $primary-foreground;
+        color: $primary-background;
+        padding: 1em;
+    }
+
+    .citation:target {
+        border: 1px solid $ghostly;
+    }
 }
 
 /* ==========================================================================
