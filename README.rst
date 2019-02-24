@@ -6,4 +6,15 @@ Byrgen
    :target: LICENSE
    :alt: MIT License
 
-A place for ghosts.
+Byrgen is a a theme for the `Ghost`_ publishing platform. Minimalist, single column and monochromatic.
+
+
+.. image:: index.png
+   :alt: Byrgen Index
+
+
+.. image:: page.png
+   :alt: Byrgen Page
+
+
+.. _Ghost: https://ghost.org/
