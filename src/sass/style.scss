@@ -22,9 +22,6 @@ a {
     color: $primary-foreground;
     text-decoration: none;
     font-family: 'plex-bold', sans-serif;
-}
-
-a {
     border-bottom: 2px solid transparent;
     transition: border-bottom 0.25s;
 }
@@ -173,10 +170,6 @@ sub {
         text-transform: lowercase;
         letter-spacing: 0.3em;
     }
-
-    #blog-description {
-        margin-top: 1.5em;
-    }
 }
 
 /* ==========================================================================
@@ -284,6 +277,14 @@ main#index {
         background-color: $primary-foreground;
         color: $primary-background;
         padding: 1em;
+
+        a {
+            color: $primary-background;
+        }
+
+        a:hover {
+            border-bottom: 2px solid $primary-background;
+        }
     }
 
     .citation:target {
