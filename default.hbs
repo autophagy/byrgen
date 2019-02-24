@@ -4,7 +4,11 @@
     <meta charset="utf-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {{#is "home"}}
     <title>{{meta_title}}</title>
+    {{else}}
+    <title>{{meta_title}} &vert; {{@blog.title}}</title>
+    {{/is}}
     <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/grayscale.min.css"}}">
     <script src="{{asset "js/highlight.min.js"}}">
