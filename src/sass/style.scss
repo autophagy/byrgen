@@ -15,7 +15,7 @@ body {
     background-color: $primary-background;
     font-family: 'plex', sans-serif;
     color: $primary-foreground;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 a {
@@ -84,7 +84,7 @@ ul {
 
 h1, h2 {
     font-size: 2em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     font-family: 'plex-light', sans-serif;
     line-height: 1.33em;
 }
@@ -201,7 +201,7 @@ main#index {
     }
 
     .post {
-        margin-bottom: 4em;
+        margin-bottom: 2em;
     }
 
     ul {
